@@ -1,5 +1,9 @@
 # 💻 CarWorth — Frontend Web Application
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-car--worth.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://car-worth.vercel.app/)
+
+> 🌐 **Live Web Application:** [https://car-worth.vercel.app/](https://car-worth.vercel.app/)
+
 Modern AI/FinTech SaaS web application for used car valuations built with Next.js 16 (App Router), TypeScript, Tailwind CSS, and Lucide Icons.
 
 ---

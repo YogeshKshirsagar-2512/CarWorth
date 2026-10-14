@@ -1,13 +1,17 @@
 # 🚗 CarWorth — AI Resale Price Prediction Engine
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-car--worth.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://car-worth.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YogeshKshirsagar-2512/CarWorth)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.4+-black.svg?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-Champion_Model-orange.svg?style=flat&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4+-F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Test R²](https://img.shields.io/badge/Test_R²-0.9200-10B981.svg?style=flat)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> 🌐 **Live Web Application:** [https://car-worth.vercel.app/](https://car-worth.vercel.app/)  
+> 📂 **GitHub Repository:** [https://github.com/YogeshKshirsagar-2512/CarWorth](https://github.com/YogeshKshirsagar-2512/CarWorth)
 
 **CarWorth** is a production-grade, full-stack machine learning web application inspired by modern FinTech & AI SaaS architectures. It evaluates **81 engineered vehicle attributes** across **7,400+ verified Indian automotive market sales** to predict the accurate, fair resale value (in Indian Rupees, ₹) of pre-owned cars in India with high precision.
 
@@ -15,9 +19,9 @@
 
 ## 📷 Application Interface
 
-![CarWorth AI Interface](docs/screenshot.png)
+[![CarWorth AI Live Web Application](docs/screenshot.png)](https://car-worth.vercel.app/)
 
-> **FinTech SaaS Aesthetic:** Clean light-mode design featuring ambient gradient mesh, vignetted tech micro-grid, live ML telemetry (`Test R² = 0.9200`, `MAE = ₹38.5k`), odometer price reveal animations, and interactive 15-model regression benchmark comparisons.
+> **FinTech SaaS Aesthetic:** Clean light-mode design featuring ambient gradient mesh, vignetted tech micro-grid, live ML telemetry (`Test R² = 0.9200`, `MAE = ₹38.5k`), odometer price reveal animations, and interactive 15-model regression benchmark comparisons. Live at [car-worth.vercel.app](https://car-worth.vercel.app/).
 
 ---
 
@@ -299,9 +303,17 @@ docker build -t carworth-frontend -f frontend/Dockerfile .
 docker run -p 3000:3000 carworth-frontend
 ```
 
-### Cloud Hosting Recommendations
-- **Backend:** [Render](https://render.com), [Fly.io](https://fly.io), or AWS ECS / App Runner.
-- **Frontend:** [Vercel](https://vercel.com) or [Netlify](https://netlify.com) (set `NEXT_PUBLIC_API_URL` to your backend URL).
+### 🌐 Live Production Deployment
+
+The web application is live in production on Vercel:
+- **Production URL:** [https://car-worth.vercel.app/](https://car-worth.vercel.app/)
+- **Frontend Architecture:** Next.js 16 (App Router) + TypeScript + Tailwind CSS
+- **Inference Mode:** Serverless Edge ML Engine with dual-mode proxy to FastAPI
+- **Hosting Platform:** [Vercel](https://vercel.com)
+
+### Container & Cloud Deployment
+- **Frontend:** Deployed on **Vercel** ([https://car-worth.vercel.app/](https://car-worth.vercel.app/))
+- **Backend Microservice:** Can be deployed as a container on [Render](https://render.com), [Fly.io](https://fly.io), or AWS ECS / App Runner (link via `NEXT_PUBLIC_API_URL` environment variable).
 
 ---
 
