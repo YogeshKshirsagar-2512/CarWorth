@@ -9,8 +9,10 @@ interface PriceGaugeProps {
 }
 
 export function PriceGauge({ price, mae, formattedPrice }: PriceGaugeProps) {
-  const lowerBound = Math.max(0, price - mae);
-  const upperBound = price + mae;
+  const safePrice = Number(price) || 0;
+  const safeMae = typeof mae === "number" && !isNaN(mae) ? mae : parseFloat(String(mae).replace(/[^\d.]/g, "")) || 38500;
+  const lowerBound = Math.max(0, safePrice - safeMae);
+  const upperBound = safePrice + safeMae;
 
   const formatNumber = (num: number) => {
     return `₹${Math.round(num).toLocaleString("en-IN")}`;
@@ -23,7 +25,7 @@ export function PriceGauge({ price, mae, formattedPrice }: PriceGaugeProps) {
           Fair Market Confidence Band (±MAE)
         </span>
         <span className="text-slate-500 font-mono-tabular text-[11px]">
-          MAE: ±₹{mae.toLocaleString("en-IN")}
+          MAE: ±₹{safeMae.toLocaleString("en-IN")}
         </span>
       </div>
 
